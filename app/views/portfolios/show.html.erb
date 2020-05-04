@@ -23,5 +23,10 @@
   <%= @portfolio.text %>
 </p>
 
+<h2>Technologies used:</h2>
+<% @portfolio.technologies.each do |technology| %>
+  <p><%= technology.name %><p>
+<% end %>
+
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
