@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+
   has_many :technologies
   accepts_nested_attributes_for :technologies, reject_if: lambda { |attr| attr['name'].blank? }
 
@@ -22,3 +23,4 @@ class Portfolio < ApplicationRecord
   end
 
 end
+
