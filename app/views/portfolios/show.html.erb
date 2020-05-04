@@ -1,4 +1,38 @@
+
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @portfolio.main_image %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @portfolio.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @portfolio.subtitle %>
+</p>
+
+
+<p>
+  <strong>Body:</strong>
+  <%= @portfolio.body %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @portfolio.text %>
+</p>
+
+<h2>Technologies used:</h2>
+<% @portfolio.technologies.each do |technology| %>
+  <p><%= technology.name %><p>
+<% end %>
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>
 <%= image_tag @portfolio_item.main_image %>
 <h1><%= @portfolio_item.title %></h1>
 <em><%= @portfolio_item.subtitle %></em>
 <p><%= @portfolio_item.body %></p>
+
