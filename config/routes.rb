@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :portfolios
   get 'angular-items', to: 'portfolios#angular'
   get 'pages/home'
